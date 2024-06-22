@@ -17,6 +17,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <title>VarnyTech|Portfolio</title>
   </head>
   <body>
@@ -238,7 +240,7 @@
           <!-- Slides -->
           <div class="swiper-slide">
             <div class="client__card">
-              <img src="assets/samir.jpg" alt="client" />
+              <img src="assets/C.E.0-0 - Copy.jpg" alt="client" />
               <div>
                 <p>
                   They transformed our online presence with their SEO and
@@ -247,7 +249,7 @@
                   substantially. I highly recommend their digital marketing
                   expertise.
                 </p>
-                <h4>Samir Kinid <span>CEO, Corporation</span></h4>
+                <h4>Erick Vicent <span>CEO, Corporation</span></h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -282,7 +284,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <img src="assets/client-3.jpg" alt="client" />
+              <img src="assets/manager-o.jpg" alt="client" />
               <div>
                 <p>
                   Our digital marketing strategy needed a revamp, and they
@@ -290,7 +292,7 @@
                   to PPC campaigns and social media advertising has generated a
                   significant increase in our website traffic and conversions.
                 </p>
-                <h4>David Peterson <span>Marketing Manager</span></h4>
+                <h4>Hamimu Mopei<span>Marketing Manager</span></h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -303,7 +305,7 @@
           </div>
           <div class="swiper-slide">
             <div class="client__card">
-              <img src="assets/client-4.jpg" alt="client" />
+              <img src="assets/samir.jpg" alt="client" />
               <div>
                 <p>
                   The mobile app they developed for our company exceeded our
@@ -359,17 +361,18 @@
       <h2 class="section__header">Get In Touch</h2>
       <form action="/" class="contact__form">
         <div class="input__row">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
+          <input id="fname" type="text" placeholder="Name" class=" input" minlength="8" maxlength="40"  required>
+          <input id="email" type="email" placeholder="Email" class="input" minlength="8" maxlength="30" required>
         </div>
         <div class="input__row">
-          <input type="text" placeholder="Subject" />
-          <input type="tel" placeholder="phone No" />
+          <input id="phoneInput" type="tel" placeholder="+255-667-456-789"  min="12" max="13"  title="Enter a phone number in the format:255-667-456-789" class=" input" required>
+          <input id="subject" type="text" placeholder="subject"  minlength="8" maxlength="30" class="input" required>
         </div>
        
-        <input type="text" placeholder="messsage" />
+        <textarea id="MessageSend" placeholder="messsage"required></textarea>
 
-        <button class="btn">Submit</button>
+        <button id="myButton" class="btn" type="submit">Submit</button>
+        
       </form>
     </section>
 

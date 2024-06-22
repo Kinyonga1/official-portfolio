@@ -503,6 +503,23 @@ nav {
   color: var(--text-light);
 }
 
+.contact__form textarea{
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primary-color-dark);
+  border-radius: 5px;
+
+}
+
+.contact__form textarea::placeholder{
+  color: var(--text-light);
+}
+
 .contact__form .btn {
   max-width: fit-content;
   margin-inline: auto;
