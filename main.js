@@ -94,3 +94,11 @@ ScrollReveal().reveal(".blog__card", {
   ...scrollRevealOption,
   interval: 400,
 });
+
+// making a call to mobile
+function initiateCall() {
+  // Replace '1234567890' with the number you want to call
+  window.location.href = 'tel:+255 755 520 538';
+}
+
+document.getElementById('callButton').onclick = initiateCall;

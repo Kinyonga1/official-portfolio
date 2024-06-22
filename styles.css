@@ -247,7 +247,7 @@ nav {
 .about__btns {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .about__btns .download__btn {
@@ -522,6 +522,8 @@ nav {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
+  font-family: 'Playfair Display, serif';
+  color:#ee9821;
 }
 
 .footer__col p {
