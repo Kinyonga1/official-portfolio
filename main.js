@@ -29,7 +29,7 @@ const swiper = new Swiper(".swiper", {
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
-  duration: 1000,
+  duration: 900,
 };
 
 // header container
@@ -39,22 +39,22 @@ ScrollReveal().reveal(".header__image img", {
 
 ScrollReveal().reveal(".header__content h4", {
   ...scrollRevealOption,
-  delay: 500,
+  delay: 400,
 });
 
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 900,
 });
 
 ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1400,
 });
 
 ScrollReveal().reveal(".header__content .btn", {
   ...scrollRevealOption,
-  delay: 2000,
+  delay: 1800,
 });
 
 // about container
@@ -75,12 +75,12 @@ ScrollReveal().reveal(".about__content p", {
 
 ScrollReveal().reveal(".about__content h4", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1300,
 });
 
 ScrollReveal().reveal(".about__btns", {
   ...scrollRevealOption,
-  delay: 2000,
+  delay: 1800,
 });
 
 // service container
@@ -92,5 +92,5 @@ ScrollReveal().reveal(".service__card", {
 // blog container
 ScrollReveal().reveal(".blog__card", {
   ...scrollRevealOption,
-  interval: 500,
+  interval: 400,
 });
