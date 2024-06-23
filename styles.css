@@ -543,6 +543,11 @@ nav {
   color:#ee9821;
 }
 
+.footer__col h5 a img{
+ width: 180px;
+ color: var(--primary-color-dark);
+}
+
 .footer__col p {
   margin-bottom: 1.5rem;
   color: var(--text-light);
@@ -591,6 +596,35 @@ nav {
   color: var(--text-light);
   text-align: center;
 }
+
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: -70px;
+  width: 70px;
+  height: 70px;
+  border: 1px dashed currentColor;
+  color: hsl(346, 100%, 58%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  transition: 0.5s ease;
+  z-index: 3;
+}
+
+.back-top-btn.show {
+  transform: translateX(-100px);
+  visibility: visible;
+}
+
+.back-top-btn:hover { color: var(--white); }
+
 
 @media (width > 480px) {
   .banner__container {
