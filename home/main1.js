@@ -97,19 +97,13 @@ ScrollReveal().reveal(".blog__card", {
 
 
 
-// ###########################33 SECURITY ##########################3
 
-
-//***************** SENDING MESSAGE TO EMAIL **************************
+// security measures
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  // Ensure the DOM is fully loaded
-
   const fname = document.getElementById('fname');
   const email = document.getElementById('email');
   const nophone = document.getElementById('phoneInput');
-
-
   document.addEventListener('DOMContentLoaded', function () {
 
     var inputElement = document.getElementById('phone');
@@ -120,7 +114,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       console.error('Element with ID "myInput" not found');
     }
   });
-
 
   const subject = document.getElementById('subject');
   const MessageSend = document.getElementById('MessageSend');
@@ -151,28 +144,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }).then(
       message => alert('thank you! your details and message sent successfully')
     );
-
-
+// allow one click only
     let clickCount = 0;
 
     document.getElementById('myButton').addEventListener('click', function handleClick(event) {
       if (clickCount < 2) {
-        // Disable the button after the first or second click
         event.target.disabled = true;
         clickCount++;
         console.log(`Button clicked ${clickCount} time(s) and now disabled`);
       }
-    }, { once: false }); // Remove the 'once' option to keep the listener active
+    }, { once: false }); 
   });
 
 });
 
-
-
-
-
-// Replace any character that is not a letter, number, underscore, or hyphen
-
+// remove space
 function sanitizeInput(input) {
   var sanitized = input.value.replace(/[^a-zA-Z0-9_-]/g, '');
   input.value = sanitized;
@@ -180,34 +166,25 @@ function sanitizeInput(input) {
 
 // making a call to mobile
 function initiateCall() {
-  // Replace '1234567890' with the number you want to call
   window.location.href = 'tel:+255 755 520 538';
 }
 
 document.getElementById('callButton').onclick = initiateCall;
 
-// ************************** PHONE NUMBER ****************
-
+// phone number check
 document.getElementById('phoneInput').addEventListener('input', function (e) {
-  // Remove any character that is not a digit or a plus sign
   var input = e.target.value.replace(/[^\d+]/g, '');
-
-  // Check if the input starts with a plus sign
   var startsWithPlus = input.startsWith('+');
 
   if (!startsWithPlus) {
     input = '+' + input;
   }
-
-  // Format the rest of the input
   var formattedInput = input.match(/(\+\d{0,3})(\d{0,3})(\d{0,3})(\d{0,3})/);
   e.target.value = formattedInput[1] + (formattedInput[2] ? '-' + formattedInput[2] : '') + (formattedInput[3] ? '-' + formattedInput[3] : '') + (formattedInput[4] ? '-' + formattedInput[4] : '');
 });
 
-// ************************* NAME SPACE ***************
-
+// names replace dash after gap
 document.getElementById('fname').addEventListener('input', function (e) {
-  // Replace spaces with dashes and limit to the first three spaces
   e.target.value = e.target.value
     .replace(/\s+/g, '-')
     .split('-')
@@ -216,10 +193,7 @@ document.getElementById('fname').addEventListener('input', function (e) {
 });
 
 
-/**
- * BACK TO TOP BUTTON
- */
-
+// back to top 
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", function () {
@@ -227,9 +201,7 @@ window.addEventListener("scroll", function () {
   const windowHeight = window.innerHeight;
   const scrollEndPos = bodyHeight - windowHeight;
   const totalScrollPercent = (window.scrollY / scrollEndPos) * 100;
-
   backTopBtn.textContent = `${totalScrollPercent.toFixed(0)}%`;
-
   // visible back top btn when scrolled 5% of the page
   if (totalScrollPercent > 5) {
     backTopBtn.classList.add("show");

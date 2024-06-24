@@ -184,10 +184,14 @@ header a {
 
 .thumbnail .item .content .title {
    font-weight: 500;
+   color: #ee9821;
+   font-weight: 600;
+   font-style: bold;
 }
 
 .thumbnail .item .content .description {
    font-weight: 300;
+   color: rgb(255, 252, 252);
 }
 
 /* Arrow Btns */

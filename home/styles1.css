@@ -597,11 +597,7 @@ nav {
   text-align: center;
 }
 
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
-
+/* back to top */
 .back-top-btn {
   position: fixed;
   bottom: 30px;
