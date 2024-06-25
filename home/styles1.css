@@ -391,6 +391,7 @@ nav {
 
 .service__card p {
   color: var(--text-light);
+  text-align: left;
 }
 
 .swiper {
